@@ -32,20 +32,20 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative overflow-hidden px-6 md:px-8 pt-12 pb-20 md:pt-20 md:pb-32">
+    <section id="hero" className="relative px-6 md:px-8 pt-24 pb-4 md:pt-20 md:pb-32">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Text */}
           <div className="order-1">
             {/* Name Lockup */}
             <div
-              className="mb-6"
+              className="mb-3 md:mb-6"
               style={{
                 opacity: step >= 1 ? 1 : 0,
                 transition: 'opacity 600ms cubic-bezier(0.16, 1, 0.3, 1)',
               }}
             >
-              <h1 className="font-display text-[clamp(48px,8vw,100px)] font-extrabold leading-[0.9] tracking-[-0.03em]">
+              <h1 className="font-display text-[clamp(36px,9vw,100px)] font-extrabold leading-[0.9] tracking-[-0.03em]">
                 <span className="stroke-text block">ZAMEER</span>
                 <span className="block text-ink">PANHWER</span>
               </h1>
@@ -53,7 +53,7 @@ export function Hero() {
 
             {/* Role Label with Scramble Effect */}
             <div
-              className="mb-6"
+              className="mb-4 md:mb-6"
               style={{
                 opacity: step >= 2 ? 1 : 0,
                 transition: 'opacity 400ms cubic-bezier(0.16, 1, 0.3, 1)',
@@ -80,7 +80,7 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div
-              className="flex flex-wrap items-center gap-4 mt-8"
+              className="flex flex-wrap items-center gap-4 mt-6 md:mt-8"
               style={{
                 opacity: step >= 4 ? 1 : 0,
                 transform: step >= 4 ? 'translateY(0)' : 'translateY(10px)',
@@ -97,7 +97,7 @@ export function Hero() {
 
             {/* Social Icons */}
             <div
-              className="flex items-center gap-4 mt-10"
+              className="flex items-center gap-4 mt-6 md:mt-10"
               style={{
                 opacity: step >= 4 ? 1 : 0,
                 transition: 'opacity 500ms cubic-bezier(0.16, 1, 0.3, 1) 200ms',
@@ -118,9 +118,9 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="order-2 flex justify-center lg:justify-end w-full mt-12 lg:mt-0 lg:-mt-20">
+          <div className="order-2 flex justify-center lg:justify-end w-full mt-6 sm:mt-12 lg:mt-0 lg:-mt-20">
             <div
-              className="relative w-full max-w-[460px] lg:max-w-[520px]"
+              className="relative w-full max-w-[220px] sm:max-w-[360px] md:max-w-[460px] lg:max-w-[520px]"
               style={{
                 opacity: step >= 5 ? 1 : 0,
                 transform: step >= 5 ? 'scale(1)' : 'scale(0.95)',

@@ -68,13 +68,13 @@ export function HeroScrollTransition({ hero, content }: HeroScrollTransitionProp
       const deltaY = touchStartY - touchY; // positive = swipe up (scroll down)
 
       if (state.heroActive) {
-        if (deltaY > 10) {
+        if (deltaY > 50) {
           if (e.cancelable) e.preventDefault();
           setIsTransitioning(true);
           setHeroActive(false);
         }
       } else {
-        if (window.scrollY <= 0 && deltaY < -10) {
+        if (window.scrollY <= 0 && deltaY < -50) {
           if (e.cancelable) e.preventDefault();
           setIsTransitioning(true);
           setHeroActive(true);
