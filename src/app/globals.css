@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #F6F6F5;
+  --color-ink: #141414;
+  --color-muted: #555555;
+  --color-muted-light: #999999;
+  --color-accent: #22C55E;
+  --color-surface-dark: #141414;
+  --color-border: #E5E5E5;
+  --color-border-dark: #2A2A2A;
+  
+  --font-display: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  
+  --radius-card: 24px;
+  --radius-pill: 9999px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+}
+
+/* ── Base reset & global styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #ECECEC;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Atmospheric outer background ── */
+.atmospheric-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 200, 200, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(210, 210, 210, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(195, 195, 195, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #EFEFEF 0%, #E8E8E8 50%, #EFEFEF 100%);
+  animation: atmospheric-drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes atmospheric-drift {
+  0% { 
+    background-position: 0% 0%, 100% 0%, 50% 100%, 0% 0%;
+  }
+  100% { 
+    background-position: 5% 5%, 95% 5%, 55% 95%, 0% 0%;
+  }
+}
+
+/* ── Main site container card ── */
+.site-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 16px auto;
+  background: var(--color-base);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    margin: 20px auto;
+  }
+}
+
+/* ── Section watermark heading ── */
+.watermark {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(80px, 15vw, 200px);
+  font-weight: 800;
+  text-transform: uppercase;
+  opacity: 0.05;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.watermark-light {
+  color: var(--color-ink);
+}
+
+.watermark-dark {
+  color: #ffffff;
+}
+
+/* ── Stroke/outlined text ── */
+.stroke-text {
+  -webkit-text-stroke: 2px var(--color-ink);
+  color: transparent;
+}
+
+.stroke-text-white {
+  -webkit-text-stroke: 2px #ffffff;
+  color: transparent;
+}
+
+/* ── Section label with / prefix ── */
+.section-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* ── Reduced motion preferences ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .atmospheric-bg {
+    animation: none;
+  }
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+/* ── Selection color ── */
+::selection {
+  background: var(--color-ink);
+  color: var(--color-base);
+}
