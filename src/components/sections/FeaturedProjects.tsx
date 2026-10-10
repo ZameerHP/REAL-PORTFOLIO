@@ -60,7 +60,9 @@ export function FeaturedProjects() {
           {filteredProjects.map((project, index) => (
             <TiltCard key={project.slug}>
               <Link
-                href={`/projects/${project.slug}`}
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   'group flex flex-col gap-5 transition-all duration-700 ease-out',
                   isInView
@@ -78,9 +80,14 @@ export function FeaturedProjects() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-display text-[20px] font-bold text-ink mb-1 group-hover:text-muted transition-colors">
-                  {project.title}
-                </h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-[20px] font-bold text-ink mb-1 group-hover:text-muted transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-ink group-hover:translate-x-0.5 transition-transform">
+                      Visit Live <span aria-hidden="true">↗</span>
+                    </span>
+                  </div>
                 <p className="text-[14px] text-muted line-clamp-2 mb-3">
                   {project.description}
                 </p>
