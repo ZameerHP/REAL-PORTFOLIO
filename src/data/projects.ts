@@ -18,23 +18,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'zenox-hear-beyond',
-    title: 'ZENOX — Hear Beyond',
-    description: 'A cinematic, product-led audio brand experience with bold typography, immersive burgundy visuals, and a premium headphone storefront aesthetic.',
-    longDescription: 'ZENOX — Hear Beyond is a headphone brand website concept built around a distinctive dark-and-crimson visual identity. The experience pairs oversized product imagery, editorial typography, feature storytelling, and a carefully paced layout to make the brand feel premium and memorable.',
-    category: 'web-design',
-    tags: ['Brand Experience', 'Product Design', 'Web Design'],
-    image: 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://zenox-hear-beyond.zameerpanhwer67.chatgpt.site/',
-    liveUrl: 'https://zenox-hear-beyond.zameerpanhwer67.chatgpt.site/',
-    color: '#0F172A',
-    service: 'Brand & Product Website',
-    timeline: 'Custom Build',
-    tools: ['Visual Direction', 'Responsive Design', 'Motion Design'],
-    challenge: 'Give a headphone brand a distinctive online identity while keeping the product and brand message at the centre of the experience.',
-    solution: 'Created a dark, cinematic visual system with crimson lighting, expressive type, product-focused sections, and clear content hierarchy.',
-    outcome: 'A published brand experience that presents the ZENOX headphone concept through a cohesive, premium storefront-style website.',
-  },
-  {
     slug: 'sardaar-g-construction',
     title: 'Sardaar G Construction',
     description: 'A polished construction business website designed to build trust, communicate services clearly, and give prospective customers a strong first impression.',
@@ -83,6 +66,6 @@ export const projects: Project[] = [
     tools: ['Next.js', 'Supabase', 'Square', 'Resend', 'Client Portal'],
     challenge: 'Give a creative studio more than a brochure website: it needed a central way to manage clients and projects while providing clients with a private, useful online space.',
     solution: 'Built a public-facing studio website alongside an owner dashboard and client portal, with project/client management, photo delivery, invoice records, and Square-oriented payment workflows.',
-    outcome: 'A connected studio platform concept that brings the brand website, studio administration, client access, creative delivery, and payment-related workflows into one experience.',
+    outcome: 'A connected studio platform that brings the brand website, studio administration, client access, creative delivery, and payment-related workflows into one experience.',
   },
 ];
