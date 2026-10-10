@@ -87,9 +87,14 @@ export default function ProjectDetail() {
                 {/* Buttons */}
                 <ScrollReveal delay={400}>
                   <div className="flex flex-wrap items-center gap-4 mt-8">
-                    <PillButton variant="primary" arrow="upright" href="#">
-                      Live Preview
-                    </PillButton>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-ink text-base px-7 py-3.5 text-[15px] font-medium hover:bg-[#2a2a2a] hover:shadow-lg transition-all"
+                    >
+                      Visit Live Website <span aria-hidden="true">↗</span>
+                    </a>
                     <PillButton variant="secondary" href="#contact">
                       Contact Me
                     </PillButton>
